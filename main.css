@@ -150,10 +150,17 @@ nav a:hover
   margin: 20px;
   padding: 20px;
 
+  background-image: url("assets/image/image1.JPEG");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover ;
+
 }
 
 .meow-da-image
 {
+
+  display: none;
 
   border-radius: 28px;
 
@@ -175,6 +182,7 @@ nav a:hover
   background-color: rgba(150, 150, 150, 0.0);
 
   width: 60%;
+  height: auto;
 
   padding: 20px;
   margin: 20px;
@@ -198,7 +206,7 @@ nav a:hover
 
   color: black;
 
-  height: auto;
+  height: 650px;
   width: 80%;
 
   padding: 5%;
@@ -208,11 +216,21 @@ nav a:hover
 
   font-size: 30px;
 
-  display: inline-flex;
+  display: grid;
+  grid-template-rows: 10% 90%;
+  grid-template-columns: auto;
   align-items: center;
-  justify-content: center;
 
   border-radius: 20px;
+
+}
+
+.meow-da-text h2
+{
+
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
 
 }
 
@@ -446,7 +464,7 @@ Don't you dare say anything about left and right being on the wrong side. I can'
 {
 
   width: 80%;
-  height: 300px;
+  height: auto;
 
   text-align: center;
   grid-area: image;
@@ -466,27 +484,48 @@ Don't you dare say anything about left and right being on the wrong side. I can'
 {
 
   width: 80%;
-  height: 300px;
 
-  text-align: center;
   grid-area: s-text;
+
+  font-size: 20px;
 
   background-color: var(--back-text);
 
   padding: 20px;
   margin: 20px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.pricing-text table 
+{
+
+  table-layout: auto;
+  width: 90%;
+
+  text-align: left;
+
+  padding: 20px;
+  margin: 20px;
 
 }
 
-.pricing-text p
+.pricing-text td
 {
 
-  display: flex;
-  justify-content: center;
+  border: 1px solid black;
+  padding: 10px ;
+  margin: 10px ;
+
+  width: 20%;
+  height: 70px;
+
+}
+
+.pricing-text th
+{
+
+  width: 20%;
+  height: 70px;
 
 }
 
@@ -666,7 +705,7 @@ Don't you dare say anything about left and right being on the wrong side. I can'
   display: grid;
   grid-template-areas: 
   " right image s-text left ";
-  grid-template-columns: 5% 35% 55% 5%;
+  grid-template-columns: 20% 30% 30% 20%;
   gap: 0rem;
 
 }
@@ -674,13 +713,15 @@ Don't you dare say anything about left and right being on the wrong side. I can'
 .contact-image
 {
 
-  background-image: url("assets/image/image5.JPEG");
-  background-repeat: no-repeat;
-  background-size: cover;
   background-color: rgba(249, 249, 250, 0);
   grid-area: image;
 
-  width: 100%;
+  width: 80%;
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
@@ -688,7 +729,7 @@ Don't you dare say anything about left and right being on the wrong side. I can'
 {
 
   width: 80%;
-  height: 300px;
+  height: auto;
 
   grid-area: s-text;
 
@@ -698,11 +739,11 @@ Don't you dare say anything about left and right being on the wrong side. I can'
   margin: 20px;
 
   display: grid;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 40% 60%;
   grid-template-rows: auto;
   grid-template-areas: 
   " header c-to "
-  " opening opening "
+  " opening map "
   ;
 
 }
@@ -712,9 +753,33 @@ Don't you dare say anything about left and right being on the wrong side. I can'
 
   grid-area: c-to;
 
-  display: flex;
-  align-items: right;
-  justify-content: right;
+  display: grid;
+  grid-template-columns: 30% 35% 35%;
+  grid-template-rows: auto;
+  grid-template-areas:
+  " empty phone mail "
+  ;
+
+}
+
+.cont-phone
+{
+
+  grid-area: phone;
+
+}
+
+.cont-mail
+{
+
+  grid-area: mail;
+
+}
+
+.contact-map
+{
+
+  grid-area: map;
 
 }
 
@@ -722,6 +787,30 @@ Don't you dare say anything about left and right being on the wrong side. I can'
 {
 
   grid-area: opening;
+  width: 50%;
+  margin: 0px ;
+  padding: 0px ;
+
+}
+
+.opening table
+{
+
+  border: 5px solid black;
+
+}
+
+.opening td, th
+{
+
+  height: 40px;
+  width: 50%;
+  border: none;
+
+  text-align: center;
+
+  padding: 4px;
+  margin: 4px;
 
 }
 
@@ -737,6 +826,7 @@ Don't you dare say anything about left and right being on the wrong side. I can'
 {
 
   grid-area: header;
+  text-align: center;
 
 }
 
@@ -785,7 +875,7 @@ footer
 
 /* ----====Mobile View====---- */
 
-@media (max-width: 768px)
+@media (max-width: 1420px)
 {
 
   .Studio, .Pricing, .Service, .Massages, .Q-A, .Contacts
@@ -830,6 +920,16 @@ footer
     margin: 20px;
     padding: 20px;
 
+    background-image: none;
+
+  }
+
+  .meow-da-text
+  {
+
+    grid-template-rows: 20% 80%;
+    height: 1000px;
+
   }
 
 
@@ -850,16 +950,27 @@ footer
   nav
   {
 
-    grid-template-columns: 20% 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
   }
   
   nav a
   {
 
-    font-size: 20px;
-    padding: 0.5%;
+    font-size: 15px;
+    text-align: center;
+
+    padding: 1%;
     margin: 0.5%;
+
+  }
+
+  .nav-logo
+  {
+
+    display: none;
 
   }
 
