@@ -705,7 +705,7 @@ Don't you dare say anything about left and right being on the wrong side. I can'
   display: grid;
   grid-template-areas: 
   " right image s-text left ";
-  grid-template-columns: 20% 30% 30% 20%;
+  grid-template-columns: 5% 30% 60% 5%;
   gap: 0rem;
 
 }
