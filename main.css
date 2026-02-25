@@ -875,7 +875,7 @@ footer
 
 /* ----====Mobile View====---- */
 
-@media (max-width: 1420px)
+@media (max-width: 2940px)
 {
 
   .Studio, .Pricing, .Service, .Massages, .Q-A, .Contacts
@@ -959,11 +959,8 @@ footer
   nav a
   {
 
-    font-size: 15px;
+    font-size: 4;
     text-align: center;
-
-    padding: 1%;
-    margin: 0.5%;
 
   }
 
