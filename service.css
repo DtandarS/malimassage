@@ -1,0 +1,318 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/*
+
+I am too lazy to write numbers. I can write words and much faster than numbers. It is also much cleaner to me.
+
+I can assure you. This is so much dumber than write the number myself. But who cares this shit is my code :>
+
+*/
+
+:root{
+
+  --margin: 20px;
+  --padding: 20px;
+  --block: inline-block;
+  --maxW: 100%;
+  --maxH: 100%;
+  --default-padding: 0;
+  --default-margin: 0;
+  --back-text: rgba(150, 150, 150, 0.4);
+  --back-image: #b1bab6;
+
+}
+
+*
+{
+
+  font-family: "Nunito Sans", sans-serif;
+  font-style: normal;
+
+  max-width: var(--maxW);
+  max-height: var(--maxH);
+  padding: var(--default-padding);
+  margin: var(--default-margin);
+
+  justify-items: center; 
+
+  width: var(--maxW) ; 
+
+  overflow-x: hidden;
+
+  border-radius: 10px ;
+
+}
+
+body
+{
+  display: grid;
+  row-gap: 20px;
+  grid-template-columns: 10% 80% 10%;
+  grid-template-rows: auto;
+  grid-template-areas:
+  "nav nav nav"
+  "m-left content m-right"
+  "m-left contact m-right"
+  ;
+}
+
+
+nav
+{
+
+  grid-area: nav;
+  height: 80px;
+  width: 100%;
+
+  background-color: #B1BAB6;
+
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 90% 10%;
+  grid-template-areas: 
+  " logo links "
+  ;
+
+  border-radius: 0px;
+}
+
+nav a 
+{
+
+  color: rgba(50, 45, 50, 1); 
+  text-decoration: none;
+  font-size: 20px;
+
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba( 249, 245, 249, 1);
+  padding: 10px;
+  margin: 10px;
+
+  border-radius: 20px;
+
+}
+
+nav a:hover
+{
+  color: rgba(145, 150, 149, 1);
+}
+
+.navbar
+{
+  grid-area: links;
+
+  display: inline-flex;
+}
+
+.nav-logo
+{
+  grid-area: logo;
+}
+
+
+/* ----========---- */
+
+/* ----====Content====---- */
+
+.service-info
+{
+
+  grid-area: content;
+  display: grid;
+  column-gap: 1.3333333333333%;
+  row-gap: 20px;
+  grid-template-rows: auto;
+  grid-template-columns: 24% 24% 24% 24%; 
+  grid-template-areas: 
+  "card card card card"
+  "card card card card"
+  ;
+
+  max-height: 3000px;
+
+}
+.service-info div
+{
+  height: 650px;
+  width: auto;
+
+  padding: 0px;
+  margin: 0px;
+
+  text-align: center;
+
+  background-color: rgb(180, 180, 180);
+}
+
+
+/* ----====Contact Info====---- */
+
+.Contacts
+{
+
+  border-radius: 20px;
+  display: grid;
+  grid-template-areas: 
+  " image s-text ";
+  grid-template-columns: 50% 50% ;
+  gap: 0rem;
+
+}
+
+.contact-image
+{
+
+  background-color: rgba(249, 249, 250, 0);
+  grid-area: image;
+
+  width: 80%;
+  height: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.contact-info
+{
+
+  width: 100%;
+  height: auto;
+
+  grid-area: s-text;
+
+  background-color: var(--back-image);
+
+  padding: 20px;
+  margin: 20px;
+
+  display: grid;
+  grid-template-columns: 40% 55%;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  " header c-to "
+  " opening map "
+  ;
+
+}
+
+.contact-to
+{
+
+  grid-area: c-to;
+
+  display: grid;
+  grid-template-columns: 30% 35% 35%;
+  grid-template-rows: auto;
+  grid-template-areas:
+  " empty phone mail "
+  ;
+
+}
+
+.cont-phone
+{
+
+  grid-area: phone;
+
+}
+
+.cont-mail
+{
+
+  grid-area: mail;
+
+}
+
+.contact-map
+{
+
+  grid-area: map;
+
+}
+
+.opening
+{
+
+  grid-area: opening;
+  width: 50%;
+  margin: 0px ;
+  padding: 0px ;
+
+}
+
+.opening table
+{
+
+  border: 5px solid black;
+
+}
+
+.opening td, th
+{
+
+  height: 40px;
+  width: 50%;
+  border: none;
+
+  text-align: center;
+
+  padding: 4px;
+  margin: 4px;
+
+}
+
+.contact-info p 
+{
+
+  text-align: left;
+  font-size: 20px;
+
+}
+
+.contact-info h2
+{
+
+  grid-area: header;
+  text-align: center;
+
+}
+
+.contact-to a
+{
+
+  text-decoration: none;
+  color: black;
+  
+  font-size: 20px;
+
+  text-align: center;
+
+}
+
+
+.contact-left
+{
+
+  grid-area: left;
+
+}
+
+.contact-right
+{
+
+  grid-area: right;
+
+}
+
+/* ----========---- */
+
+.left{grid-area: m-left;}
+.right{grid-area: m-right;}
