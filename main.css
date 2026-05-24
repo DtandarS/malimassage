@@ -156,7 +156,8 @@ nav
   grid-template-rows: auto ;
   grid-template-areas: 
   "right hello daddy-text left"
-  "right book daddy-text left";
+  "right empty daddy-text left"
+  "right empty book left";
   gap: 0rem;
   margin: 20px;
   padding: 20px;
